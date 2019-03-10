@@ -16,8 +16,7 @@ def is_git(url):
     return False
 
 def is_compress_file(url): #git 发布的 压缩文件
-    if url.startswith("https://github.com/") and \
-        ( url.endswith(".zip") or url.endswith(".tar.gz")):
+    if url.startswith("https://github.com/") and ("/releases/download/") in url:
         return True
     return False
 
@@ -49,5 +48,6 @@ if __name__ == '__main__':
     url = 'https://github.com/protocolbuffers/protobuf.git'
     url2 = 'https://github.com/EECS-PKU-XSB/Shared-learning-materials.git'
     url3 = 'https://github.com/geeeeeeeeek/electronic-wechat/releases/download/V2.0/linux-x64.tar.gz'
+    url4 = 'https://github.com/machine-drivers/docker-machine-driver-xhyve/releases/download/v0.3.3/docker-machine-driver-xhyve'
     #gitClone(url)
-    print(is_compress_file(url3))
+    print(is_compress_file(url4))
