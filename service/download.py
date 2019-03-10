@@ -21,6 +21,7 @@ def is_compress_file(url): #git 发布的 压缩文件
         return True
     return False
 
+
 def zipFile(name):
     commad = 'zip -r ' + name +'.zip ' + name
     status = os.system(commad)
@@ -28,23 +29,25 @@ def zipFile(name):
         shutil.rmtree(name)
         return True
 
+
 def gitClone(url):
     name = is_git(url)
     os.chdir(FILE_PATH)
     if name:
         commad = "git clone " + url
+        status = os.system(commad)
+        if status is 0:
+            statu = zipFile(name)
+            if statu:
+                return True
     elif is_compress_file(url):
         commad = "wget " + url
-    else:
-        return False
-    status = os.system(commad)
-    if status is 0:
-        statu = zipFile(name)
-        if statu:
+        status = os.system(commad)
+        if status is 0:
             return True
-
 if __name__ == '__main__':
     url = 'https://github.com/protocolbuffers/protobuf.git'
-    url2 = 'https://www.baidu.com'
+    url2 = 'https://github.com/EECS-PKU-XSB/Shared-learning-materials.git'
     url3 = 'https://github.com/geeeeeeeeek/electronic-wechat/releases/download/V2.0/linux-x64.tar.gz'
-    gitClone(url2)
+    #gitClone(url)
+    print(is_compress_file(url3))
