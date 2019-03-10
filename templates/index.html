@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Git 下载器</title>
+</head>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css')}}">
+{#<link rel="stylesheet" href="../static/css/youyou.css">#}
+<body>
+<div id="container">
+    <form method="post" action="/">
+        <div class="input_div">
+    <input class="input" name="url" placeholder="请输入仓库链接">
+    <input class="submit" type="submit" value="确定">
+        </div>
+    </form>
+    <div id="change">
+        <a href="/d/">
+            <label>直接去下载</label>
+        </a>
+    </div>
+    <p>{{ get_flashed_messages()[0] }}</p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: aliceblue;
+}
+
+#container {
+    margin: 0 auto;
+    width: 70%;
+    height: 100%;
+    /*box-shadow: 0 1px 5px black;*/
+    /*background-color: azure;*/
+}
+
+.box {
+    /*background-color: aqua;*/
+    float: left;
+    width: 15%;
+    height: 0;
+    padding-top: 15%;
+    margin-left: 8%;
+    margin-top: 5%;
+    box-shadow: 0 1px 5px #888888;
+    background-image: url(../file.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.file {
+    background-color: white;
+    position: absolute;
+    margin-top: -55%;
+    margin-left: 5%;
+    padding-left: 1%;
+    display: none;
+}
+
+.box:hover > .file {
+    display: block;
+}
+
+.file > p {
+    color: darkgrey;
+}
+
+.donw, .remo{
+    position: absolute;
+    width: 35%;
+    height: 18%;
+    margin-top: 5%;
+    padding: 2px;
+    background-color: darkgrey;
+}
+
+.donw {
+    margin-left: 60%;
+}
+.remo {
+    margin-left: 3%;
+}
+
+.text {
+    width: 95%;
+    height: 90%;
+    display: flex;
+    justify-content:center;
+    align-items:Center;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    color: black;
+}
+
+a:visited{
+    color: black;
+}
+
+
+.message {
+    font-size: 30px;
+    padding-left: 45%;
+}
+
+#back {
+    width: 60px;
+    height: 60px;
+    background-color: chartreuse;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    position: absolute;
+    top: 10%;
+    left: 85%;
+    float: left;
+    box-shadow: 0 1px 5px black;
+
+}
+
+#back > a {
+    position: absolute;
+    top: 10%;
+    margin-top: 13%;
+    margin-left: 13%;
+
+}
+
+#back > .label {
+    display: none;
+    float: right;
+    width: 200px;
+    height: 20px;
+    color: orange;
+}
+
+#back:hover > .label {
+    display: block;
+}

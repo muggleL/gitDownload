@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    background-color: aliceblue;
+}
+#container {
+    margin: 0 auto;
+    width: 300px;
+    height: 100px;
+}
+.input_div {
+    margin-top: 130%;
+    margin-left: -85%;
+    width: 800px;
+    height: 50px;
+    color: gray;
+    border: 0;
+    border-radius:25px;
+    box-shadow: 0 1px 5px #888888;
+
+}
+.input {
+    font-size: 100%;
+    color: gray;
+    background-color: aliceblue;
+    border: 0;
+    margin-left: 3%;
+    width: 89.5%;
+    height: 98%;
+    outline: none;
+}
+.submit {
+    font-size: 100%;
+    background-color: aliceblue;
+    border: 0;
+    color: darkgrey;
+}
+
+#container > p{
+    color: darkgrey;
+}
+
+#change {
+    position: relative;
+    left: 150%;
+    top: 50%;
+}
+#change > a {
+    color: #09ffd6;
+    text-decoration: black;
+}
+#change > a:visited {
+    color: #09ffd6;
+}
+#change > a:hover {
+    color: darkorange;
+}

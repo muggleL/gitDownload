@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>下载</title>
+</head>
+{#<link rel="stylesheet" href="../static/css/page.css">#}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/page.css')}}">
+<body>
+<div id="container">
+    <p class="message">{{ get_flashed_messages()[0] }}</p>
+{% for file in files %}
+    <div class="box">
+        <div class="file"><p>{{ file }}</p></div>
+        <div class="donw"><a href="/d/{{ file }}">
+            <p class="text">下载</p>
+        </a></div>
+        <div class="remo"><a href="/r/{{ file }}">
+            <p class="text">删除</p>
+        </a></div>
+    </div>
+{% endfor %}
+</div>
+    <div id="back">
+    <label class="label">点击返回下载页面</label>
+    <a href="/"><label>back</label></a>
+</div>
+</body>
+</html>
